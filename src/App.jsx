@@ -1,12 +1,13 @@
 import React from 'react'
-import Card from './components/3Dmodel/Card.jsx'
 import './App.css'
-import Home from './components/Home/Home.jsx'
+import SiteRoutes from './Routes/SiteRoutes.jsx'
+import Navbar from './components/NavBar/Navbar.jsx'
 
 const App = () => {
   return (
     <>
-     <Home />
+      <Navbar />
+     <SiteRoutes />
     </>
   )
 }
