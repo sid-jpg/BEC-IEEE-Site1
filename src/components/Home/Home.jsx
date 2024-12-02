@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../3Dmodel/Card";
+import Journey from "./Journey";
 
 const Home = () => {
   return (
@@ -7,8 +8,7 @@ const Home = () => {
       <div className="w-full h-screen">
         <Card />
       </div>
-      <div className="w-full h-screen bg-slate-600">
-      </div>
+      <Journey />
       <div className="w-full h-screen">
       </div>
       <div className="w-full h-screen">
