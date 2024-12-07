@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../3Dmodel/Card";
 import Journey from "./Journey";
 import Success from "./Success";
+import ExecutiveTeam from "./ExecutiveTeam";
 
 const Home = () => {
   return (
@@ -11,8 +12,7 @@ const Home = () => {
       </div>
       <Journey />
       <Success />
-      <div className="w-full h-screen">
-      </div>
+      <ExecutiveTeam />
       <div className="w-full h-screen">
       </div>
     </>
