@@ -13,6 +13,7 @@ import Sambhav from "./assets/Sambhav.png";
 import SambhavBg from "./assets/Sambhav.jpg";
 import Uday from "./assets/Uday.png"
 import UdayBg from "./assets/Uday.jpg";
+import RahulBg from "./assets/Rahul.jpg";
 
 const ExecutiveTeam = () => {
   useEffect(() => {
@@ -43,7 +44,7 @@ const ExecutiveTeam = () => {
     });
 
     const handleResize = () => {
-      if (window.innerWidth > 1024) { // Check if width is greater than 1024px
+      if (window.innerWidth >= 1024) { // Check if width is greater than 1024px
         const t2 = gsap.timeline({
           scrollTrigger: {
             trigger: ".ExecutiveTeam", // Ensures it's targeting the correct section
@@ -114,7 +115,7 @@ const ExecutiveTeam = () => {
           </div>
         </div>
 
-        <div className="execoms w-full h-[67vmin] hidden lg:flex justify-start items-end">
+        <div className="execoms w-full xl:h-[67vmin] lg:h-[90vmin] hidden lg:flex justify-start items-end">
 
           <div className="mem1  xl:w-[20%] lg:w-[25%] h-full bg-[#F4A261] rounded-full flex flex-col justify-end items-center">
             <div className="title1">
@@ -125,7 +126,7 @@ const ExecutiveTeam = () => {
                 Branch Counselor
               </h1>
             </div>
-            <img src={VJ} className="img1 rounded-b-full mt-12 w-80" alt="image" />
+            <img src={VJ} className="img1 rounded-b-full mt-10 w-80" alt="image" />
           </div>
 
           <div className="mem2 xl:w-[20%] lg:w-[25%] h-[85%] bg-[#CBD5D4] rounded-full flex flex-col justify-end items-center">
@@ -177,7 +178,7 @@ const ExecutiveTeam = () => {
               <h1 className="text-center text-2xl font-bold text-black">
                 Uday Magadum
               </h1>
-              <h1 className="text-center text-lg text-black">Treasure</h1>
+              <h1 className="text-center text-lg text-black">Treasurer</h1>
             </div>
             <img
               src={Uday}
@@ -191,7 +192,7 @@ const ExecutiveTeam = () => {
 
           <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${VJBg})`, backgroundSize: 'cover'}}>
             <div className="bg-black w-full text-center rounded-b-md">
-              <h2 className="text-md font-semibold">Dr. Vijayalakshmi S. J</h2>
+              <h2 className="text-sm sm:text-base font-semibold">Dr. Vijayalakshmi S. J</h2>
               <p className="text-sm">Branch Counselor</p>
             </div>
           </div>
@@ -220,14 +221,14 @@ const ExecutiveTeam = () => {
           <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${UdayBg})`, backgroundSize: 'cover', backgroundPosition: 'right'}}>
             <div className="bg-black w-full text-center rounded-b-md">
               <h2 className="text-md font-semibold">Uday Magadum</h2>
-              <p className="text-sm">Treasure</p>
+              <p className="text-sm">Treasurer</p>
             </div>
           </div>
 
-          <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${SambhavBg})`, backgroundSize: 'cover'}}>
+          <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${RahulBg})`, backgroundSize: 'cover'}}>
             <div className="bg-black w-full text-center rounded-b-md">
-              <h2 className="text-md font-semibold">Sambhav Osawal</h2>
-              <p className="text-sm">Treasure</p>
+              <h2 className="text-md font-semibold">Rahul Hugar</h2>
+              <p className="text-sm">Design head</p>
             </div>
           </div>
 

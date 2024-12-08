@@ -3,6 +3,8 @@ import Card from "../3Dmodel/Card";
 import Journey from "./Journey";
 import Success from "./Success";
 import ExecutiveTeam from "./ExecutiveTeam";
+import Chapters from "./Chapters";
+import PhotoSection from "./PhotoSection";
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
       <Journey />
       <Success />
       <ExecutiveTeam />
+      <Chapters />
+      <PhotoSection />
       <div className="w-full h-screen">
       </div>
     </>
