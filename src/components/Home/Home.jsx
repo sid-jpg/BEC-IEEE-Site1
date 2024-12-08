@@ -5,10 +5,24 @@ import Success from "./Success";
 import ExecutiveTeam from "./ExecutiveTeam";
 import Chapters from "./Chapters";
 import PhotoSection from "./PhotoSection";
+import Footer from "./Footer";
+import Testimonials from "./Testimonials";
+import Popup from "../NavBar/Popup";
 
 const Home = () => {
   return (
     <>
+    <Popup
+        text={
+          <>
+            <p className="w-72">Our website is still under development, and we are working hard to resolve some bugs. The official launch is scheduled for 29th December during our SB AGM. In the meantime, if you encounter any issues, please try reloading the page. Thank you for your patience and support!</p>
+            <br />
+            You're missing out on something awesome!
+            <br />
+            Open this on your desktop for the full experience!!
+          </>
+        }
+      />
       <div className="w-full h-screen">
         <Card />
       </div>
@@ -17,8 +31,8 @@ const Home = () => {
       <ExecutiveTeam />
       <Chapters />
       <PhotoSection />
-      <div className="w-full h-screen">
-      </div>
+      <Testimonials />
+      <Footer />
     </>
   );
 };

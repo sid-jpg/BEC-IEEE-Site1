@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { TiArrowRight } from "react-icons/ti";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Navigate } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 import VJ from "./assets/VJ.png";
 import VJBg from "./assets/VJ.jpg";
@@ -16,60 +17,45 @@ import UdayBg from "./assets/Uday.jpg";
 import RahulBg from "./assets/Rahul.jpg";
 
 const ExecutiveTeam = () => {
+  const [navigate, setNavigate] = useState(false);
+
   useEffect(() => {
     const t1 = gsap.timeline({
       scrollTrigger: {
-        trigger: ".ExecutiveTeam", // Ensures it's targeting the correct section
-        start: "top 80%", // Triggers when the section enters the viewport
-        end: "top 20%", // Ends slightly before the section leaves
-        scrub: true, // Smooth animation linked to scroll
+        trigger: ".ExecutiveTeam",
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true,
       },
     });
 
     // Animate the "team" class elements
-    t1.to(".anime1", {
-      opacity: 1,
-    });
-    t1.to(".anime2", {
-      opacity: 1,
-    });
-    t1.to(".anime3", {
-      opacity: 1,
-    });
-    t1.to(".anime4", {
-      opacity: 1,
-    });
-    t1.to(".anime5", {
-      opacity: 1,
+    const animeClasses = [".anime1", ".anime2", ".anime3", ".anime4", ".anime5"];
+    animeClasses.forEach((animeClass) => {
+      t1.to(animeClass, { opacity: 1 });
     });
 
     const handleResize = () => {
-      if (window.innerWidth >= 1024) { // Check if width is greater than 1024px
+      if (window.innerWidth >= 1024) {
         const t2 = gsap.timeline({
           scrollTrigger: {
-            trigger: ".ExecutiveTeam", // Ensures it's targeting the correct section
-            start: "top -5%", // Triggers when the section enters the viewport
-            end: "bottom -100%", // Ends slightly before the section leaves
-            markers: true, // Only for debugging; remove in production
-            scrub: true, // Smooth animation linked to scroll
-            pin: true,  
+            trigger: ".ExecutiveTeam",
+            start: "top -5%",
+            end: "bottom -100%",
+            scrub: true,
+            pin: true,
           },
         });
 
         t2.fromTo(
-          [".mem1", ".title1", ".img1", ".mem2", ".title2", ".img2", ".mem3", ".title3", ".img3", ".mem4", ".title4", ".img4", ".mem5", ".title5", ".img5",], // Select all mem elements
-          {
-            y: 500, // Start position
-            opacity: 0, // Start with opacity 0
-          },
-          {
-            y: 0, // Final position
-            opacity: 1, // Fade to opacity 1
-            stagger: 0.2, // Delay between each animation
-            duration: 0.5, // Duration of each animation
-            ease: "power2.out", // Smooth easing
-          }
+          [".mem1", ".title1", ".img1", ".mem2", ".title2", ".img2", ".mem3", ".title3", ".img3", ".mem4", ".title4", ".img4", ".mem5", ".title5", ".img5"],
+          { y: 500, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.2, duration: 0.5, ease: "power2.out" }
         );
+
+        return () => {
+          t2.kill(); // Kill timeline on component unmount
+        };
       }
     };
 
@@ -86,6 +72,7 @@ const ExecutiveTeam = () => {
 
   return (
     <>
+      {navigate && <Navigate to="/execoms" />}
       <div className="ExecutiveTeam h-fit max-w-[90rem] lg:px-5 sm:px-8 px-5 mx-auto mt-10 pt-10">
         <div className="lg:h-[33vmin] h-fit flex items-center">
           <div className="xl:w-[55%] lg:w-[48%] w-full">
@@ -108,7 +95,10 @@ const ExecutiveTeam = () => {
               who’s behind the success stories and groundbreaking initiatives?
               Dive deeper and discover the brilliant minds shaping our journey!
             </p>
-            <button className="anime5 opacity-0 group bg-white text-black rounded-full px-5 py-3 font-bold flex justify-center items-center gap-2 mt-5">
+            <button 
+              className="anime5 opacity-0 group bg-white text-black rounded-full px-5 py-3 font-bold flex justify-center items-center gap-2 mt-5"
+              onClick={() => setNavigate(true)}
+            >
               MEET OUR EXECOM
               <TiArrowRight className="text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
@@ -132,7 +122,7 @@ const ExecutiveTeam = () => {
           <div className="mem2 xl:w-[20%] lg:w-[25%] h-[85%] bg-[#CBD5D4] rounded-full flex flex-col justify-end items-center">
             <div className="title2">
               <h1 className="text-center text-2xl font-bold text-black">
-                Varsha meti
+                Varsha Meti
               </h1>
               <h1 className="text-center text-lg text-black">Chairperson</h1>
             </div>
@@ -199,7 +189,7 @@ const ExecutiveTeam = () => {
 
           <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${VarshaBg})`, backgroundSize: 'cover'}}>
             <div className="bg-black w-full text-center rounded-b-md">
-              <h2 className="text-md font-semibold">Varsha meti</h2>
+              <h2 className="text-md font-semibold">Varsha Meti</h2>
               <p className="text-sm">Chairperson</p>
             </div>
           </div>
@@ -243,7 +233,10 @@ const ExecutiveTeam = () => {
               who’s behind the success stories and groundbreaking initiatives?
               Dive deeper and discover the brilliant minds shaping our journey!
             </p>
-            <button className="anime5 opacity-0 group bg-white text-black rounded-full px-5 py-3 font-bold flex justify-center items-center gap-2 mt-5">
+            <button 
+              className="anime5 opacity-0 group bg-white text-black rounded-full px-5 py-3 font-bold flex justify-center items-center gap-2 mt-5"
+              onClick={() => setNavigate(true)}
+            >
               MEET OUR EXECOM
               <TiArrowRight className="text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
