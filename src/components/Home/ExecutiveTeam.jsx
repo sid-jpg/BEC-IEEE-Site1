@@ -4,8 +4,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import VJ from "./assets/VJ.png";
+import VJBg from "./assets/VJ.jpg";
+import Varsha from "./assets/Varsha.png";
+import VarshaBg from "./assets/Varsha.jpg";
+import Sanjana from "./assets/Sanjana.png";
+import SanjanaBg from "./assets/Sanjana.jpg";
 import Sambhav from "./assets/Sambhav.png";
 import SambhavBg from "./assets/Sambhav.jpg";
+import Uday from "./assets/Uday.png"
+import UdayBg from "./assets/Uday.jpg";
 
 const ExecutiveTeam = () => {
   useEffect(() => {
@@ -110,7 +117,7 @@ const ExecutiveTeam = () => {
         <div className="execoms w-full h-[67vmin] hidden lg:flex justify-start items-end">
 
           <div className="mem1  xl:w-[20%] lg:w-[25%] h-full bg-[#F4A261] rounded-full flex flex-col justify-end items-center">
-            <div className="mt-10 title1">
+            <div className="title1">
               <h1 className="text-center text-2xl font-bold text-black">
                 Dr. Vijayalakshmi S. J
               </h1>
@@ -118,25 +125,25 @@ const ExecutiveTeam = () => {
                 Branch Counselor
               </h1>
             </div>
-            <img src={VJ} className="img1 rounded-b-full mt-5 w-80" alt="image" />
+            <img src={VJ} className="img1 rounded-b-full mt-12 w-80" alt="image" />
           </div>
 
           <div className="mem2 xl:w-[20%] lg:w-[25%] h-[85%] bg-[#CBD5D4] rounded-full flex flex-col justify-end items-center">
-            <div className="mt-10 title2">
+            <div className="title2">
               <h1 className="text-center text-2xl font-bold text-black">
                 Varsha meti
               </h1>
               <h1 className="text-center text-lg text-black">Chairperson</h1>
             </div>
             <img
-              src={Sambhav}
-              className="img2 rounded-b-full mt-10"
+              src={Varsha}
+              className="img2 rounded-b-full mt-4"
               alt="image"
             />
           </div>
 
           <div className="mem3 xl:w-[20%] lg:w-[25%] h-[75%] bg-[#E4DBD2] rounded-full flex flex-col justify-end items-center">
-            <div className="mt-10 title3">
+            <div className="title3">
               <h1 className="text-center text-2xl font-bold text-black">
                 Sanjana Dadamode
               </h1>
@@ -145,8 +152,8 @@ const ExecutiveTeam = () => {
               </h1>
             </div>
             <img
-              src={Sambhav}
-              className="img3 rounded-b-full mt-10"
+              src={Sanjana}
+              className="img3 rounded-b-full"
               alt="image"
             />
           </div>
@@ -166,44 +173,67 @@ const ExecutiveTeam = () => {
           </div>
 
           <div className="mem5 xl:w-[20%] hidden h-[65%] bg-[#FEB9CE] rounded-full xl:flex flex-col justify-end items-center">
-            <div className="mt-10 title5">
+            <div className="title5">
               <h1 className="text-center text-2xl font-bold text-black">
                 Uday Magadum
               </h1>
               <h1 className="text-center text-lg text-black">Treasure</h1>
             </div>
             <img
-              src={Sambhav}
-              className="img5 rounded-b-full mt-10"
+              src={Uday}
+              className="img5 rounded-b-full"
               alt="image"
             />
           </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:hidden gap-6 place-items-center mt-16">
-          <div className="p-4 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-center items-center">
-            <img src={SambhavBg} alt="Team Member" className="w-24 h-24 mb-4" />
-            <h2 className="text-lg font-semibold">Sambhav Osawal</h2>
-            <p className="text-sm">Secretary</p>
+
+          <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${VJBg})`, backgroundSize: 'cover'}}>
+            <div className="bg-black w-full text-center rounded-b-md">
+              <h2 className="text-md font-semibold">Dr. Vijayalakshmi S. J</h2>
+              <p className="text-sm">Branch Counselor</p>
+            </div>
           </div>
-          <div className="bg-gray-200 p-4 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex justify-center items-center">
-            Div 2
+
+          <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${VarshaBg})`, backgroundSize: 'cover'}}>
+            <div className="bg-black w-full text-center rounded-b-md">
+              <h2 className="text-md font-semibold">Varsha meti</h2>
+              <p className="text-sm">Chairperson</p>
+            </div>
           </div>
-          <div className="bg-gray-200 p-4 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex justify-center items-center">
-            Div 3
+
+          <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${SanjanaBg})`, backgroundSize: 'cover'}}>
+            <div className="bg-black w-full text-center rounded-b-md">
+              <h2 className="text-md font-semibold">Sanjana Dadamode</h2>
+              <p className="text-sm">Vice Chairperson</p>
+            </div>
           </div>
-          <div className="bg-gray-200 p-4 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex justify-center items-center">
-            Div 4
+
+          <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${SambhavBg})`, backgroundSize: 'cover'}}>
+            <div className="bg-black w-full text-center rounded-b-md">
+              <h2 className="text-md font-semibold">Sambhav Osawal</h2>
+              <p className="text-sm">Secretary</p>
+            </div>
           </div>
-          <div className="bg-gray-200 p-4 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex justify-center items-center">
-            Div 5
+
+          <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${UdayBg})`, backgroundSize: 'cover', backgroundPosition: 'right'}}>
+            <div className="bg-black w-full text-center rounded-b-md">
+              <h2 className="text-md font-semibold">Uday Magadum</h2>
+              <p className="text-sm">Treasure</p>
+            </div>
           </div>
-          <div className="bg-gray-200 p-4 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex justify-center items-center">
-            Div 6
+
+          <div className="bg-gray-200 rounded-md h-48 w-40 sm:h-64 sm:w-56 flex flex-col justify-end items-center border-4 border-zinc-700" style={{backgroundImage: `url(${SambhavBg})`, backgroundSize: 'cover'}}>
+            <div className="bg-black w-full text-center rounded-b-md">
+              <h2 className="text-md font-semibold">Sambhav Osawal</h2>
+              <p className="text-sm">Treasure</p>
+            </div>
           </div>
+
         </div>
 
-        <div className="lg:hidden w-full px-5 text-justify mt-10">
+        <div className="lg:hidden w-full px-5 sm:text-justify mt-10">
             <p className="anime4 opacity-0 lg:text-sm">
               Our executive team is the backbone of our branch, leading with
               passion, innovation, and a relentless commitment to excellence.
