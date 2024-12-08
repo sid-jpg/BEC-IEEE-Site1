@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { TiArrowRight } from "react-icons/ti";
 import collage from "./assets/achievementCollage.png";
+import { Navigate } from "react-router-dom";
 
 const Success = () => {
+  const [navigate, setNavigate] = useState(false);
+
+  const handleNavigate = () => {
+    setNavigate(true);
+  };
+
+  if (navigate) {
+    return <Navigate to="/achievements" />;
+  }
+
   return (
     <>
       <div className="w-full ">
@@ -38,7 +49,10 @@ const Success = () => {
               countless stories behind them!
             </p>
 
-            <button className="group bg-white text-black rounded-full px-5 py-3 font-bold flex justify-center items-center gap-2 mt-14">
+            <button 
+              onClick={handleNavigate}
+              className="group bg-white text-black rounded-full px-5 py-3 font-bold flex justify-center items-center gap-2 mt-14"
+            >
               Our Milestones
               <TiArrowRight className="text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>

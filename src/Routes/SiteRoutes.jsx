@@ -15,6 +15,7 @@ const SiteRoutes = () => {
             <Route path='/societies' element={<UnderConstruction/>} />
             <Route path='/affinities' element={<UnderConstruction/>} />
             <Route path='/membership' element={<UnderConstruction/>} />
+            <Route path='/photo-gallery' element={<UnderConstruction/>} />
             <Route path='/*' element={<UnderConstruction />} />
         </Routes>
     </>

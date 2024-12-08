@@ -6,8 +6,11 @@ import AESS from "./assets/AESS.png";
 import ComSoc from "./assets/ComSoc.png";
 import CIS from "./assets/CIS.png"
 import { TiArrowRight } from "react-icons/ti";
+import { useNavigate } from "react-router-dom";
 
 const Chapters = () => {
+    const navigate = useNavigate();
+
     const cardData = [
         {
             id: 1,
@@ -77,7 +80,10 @@ const Chapters = () => {
                 </div>
             </div>
 
-            <button className="group bg-white text-black rounded-full px-5 py-3 font-bold flex justify-center items-center gap-2 mt-10 mx-auto">
+            <button 
+                className="group bg-white text-black rounded-full px-5 py-3 font-bold flex justify-center items-center gap-2 mt-10 mx-auto"
+                onClick={() => navigate('/societies')}
+            >
               EXPLORE OUR CHAPTERS
               <TiArrowRight className="text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>

@@ -148,7 +148,7 @@ const Journey = () => {
           <div className="w-[90%] lg:w-[45%] mt-36 sm:mt-40 lg:mt-0 lg:py-36">
             <h1 className="date3 absolute lg:hidden opacity-0 text-4xl sm:text-5xl">September 2024</h1>
             <p className="para3 opacity-0 xl:text-justify font-light text-md sm:text-lg">
-            BEC-IEEE successfully organized an international conference, attracting participants and experts from across the globe. The event showcased cutting-edge research and innovative solutions, further cementing BEC-IEEE’s reputation as a hub of academic excellence and technological advancement. This conference was not only a platform for knowledge exchange but also a celebration of 30 years of unwavering dedication to IEEE's mission of advancing technology for humanity.
+            BEC-IEEE successfully organized <b>NKCon - 24</b>, an international conference that attracted participants and experts from across the globe. The event showcased cutting-edge research and innovative solutions, further cementing BEC-IEEE's reputation as a hub of academic excellence and technological advancement. <b>NKCon-24</b> was not only a platform for knowledge exchange but also a celebration of 30 years of unwavering dedication to IEEE's mission of advancing technology for humanity.
             </p>
           </div>
 
