@@ -83,7 +83,7 @@ const PhotoSection = () => {
   return (
 
     <>
-        <div className='photo w-full h-screen flex flex-col justify-center items-center mt-20'>
+        <div className='photo w-full h-screen flex flex-col justify-center items-center mt-20 overflow-hidden'>
           <div className=''>
             <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-white'>Memorable Moments</h1>
               <h1 className='text-base sm:text-lg lg:text-2xl font-bold text-center text-white' >Relive our cherished memories through a captivating photo gallery.</h1>
